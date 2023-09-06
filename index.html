@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Automated Drone Weather Navigation</title>
+    <!-- JQuery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Carousel Effect JQuery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Reloads from start -->
+    <script>history.scrollRestoration = "manual"</script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo rotation"><a href="https://adnav-weather.github.io/"><i class="fa fa-plane"></i></a></div>
+      <!-- List of options -->
+      <div class="menu-outer" id="menu-outer">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="menu" id="menu-content">
+          <li><a href="https://adnav-weather.github.io/" onclick="closeNav()">Home</a></li>
+          <li><a href="#mission" onclick="closeNav()">Mission</a></li>
+          <li><a href="#milestones" onclick="closeNav()">Milestones</a></li>
+          <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+          <li><a href="research.html" onclick="closeNav()">References</a></li>
+          <li><a href="prevGroup.html" onclick="closeNav()"> Previous Teams Work</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></div>
+    </div>
+  </nav>
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="container">
+      <div class="home-content">
+        <div class="main-title">Automated Drone<br/>Weather Navigation </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mission section -->
+  <section class="mission" id="mission">
+    <div class="container">
+      <div class="mission-content">
+        <!-- Mission Image section -->
+        <div class="col left">
+          <img src="./images/aw609.jpg" alt="Picture of an AW609 aircraft"/>
+        </div>
+        <!-- Mission Text section -->
+        <div class="col right">
+          <h2 class="inner-sub-title">Mission</h2>
+          <p class="sub-text">
+            Our mission is to provide an automated computer controlled flight-traversing drone that 
+            can travel and land amongst harsh weather conditions, aerial traffic safely and reliably without
+            an operator.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- Milestones Section -->
+  <section class="milestones" id="milestones">
+    <div class="container">
+      <h2 class="sub-title">Milestones</h2>
+      <div class="milestones-content">
+        <div class="carousel owl-carousel col">
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Semester 1</h3>
+              <h3 class="milestone-title">Plan (Feb 7th)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1-x3eyKRjYOtGB0d5QiNm4YOQUNKv1a_cZeKR1Mwx03o/edit?usp=sharing" target="_blank">Project Plan</a></li>
+                <li><a href="https://docs.google.com/presentation/d/11dKcmkx0qwBndxxTem_pk2PhElMtCYNggcIbdnEVzeE/edit?usp=sharing" target="_blank">Presentation</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #1 (Mar 10th)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1bUAL84IVHK_oThcwG93WoIkhyoVP7LDrJBF8GdOs9hs/edit?usp=sharing" target="_blank">Requirement Document</a></li>
+                <li><a href="https://docs.google.com/document/d/1kRTyFO1HOAXaxICHx2Tp3LyVpBJ5JBYI-tLz-yg64H8/edit?usp=sharing" target="_blank">Design Document</a></li>
+                <li><a href="https://drive.google.com/file/d/14z8mDTJ1NvkMqAw_sJu98Ius2lD8WlrE/view?usp=sharing" target="_blank">Test Document</a></li>
+                <li><a href="https://docs.google.com/document/d/1Kc_o3KeHLdWrHRgSAuoA-aRFm_8FTUJpCFmSlzsAWFM/edit?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://drive.google.com/file/d/16W257Jh5SOh_Z2tKWAY_uDy8T-IiuotA/view?usp=sharing" target="_blank">Demo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #2 (April 10th ) </h3>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1ns5I8jH9OAn7wM1Mln9sncqI-8JE__DPSJI2wZXHU3E/edit?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://docs.google.com/document/d/1GJ3W-zF1CSDIs09uhHDv-k6Z9tTHbJv0WlqZnO55fxs/edit?usp=sharing" target="_blank">Research Manual</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #3 (May 1st)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1CusRPJzANdHjDLQqCDSwNsjFJDWSMc7w_W_Vqudu490/edit?usp=sharing" target="_blank">Progress Report</a></li>
+                <li><a href="https://drive.google.com/file/d/1R3GkN2zlmx2NLqeW1Qa6ZB1CmNz30hIQ/view?usp=sharing" target="_blank">Demo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-2 owl-carousel col">
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Semester 2</h3>
+              <h3 class="milestone-title">Plan (Sep. 6th)</h3>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1TJOZSM0hwEelGU3-q_GVgylhPZeCW9wr3y_UOI9EVzE/edit?usp=sharing" target="_blank">Project Plan</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #4 (Oct. 2nd)</h3>
+              <ul>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #5 (Oct. 30th)</h3>
+              <ul>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <h3 class="milestone-title">Milestone #6 (Nov 27th)</h3>
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+   <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="sub-title">Contact The Team</h2>
+      <div class="carousel-team owl-carousel">
+        <div class="card">
+          <div class="box">
+            <div class="text">Faculty Advisor</div>
+            <p>Dr. Siddhartha Bhattacharyya</p>
+            <a href="mailto:sbhattacharyya@fit.edu">sbhattacharyya@fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Graduate Student Advisor</div>
+            <p>Parth Ganeriwala</p>
+            <a href="mailto:pganeriwala2022@my.fit.edu">pganeriwala2022@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Developer</div>
+            <p>Naomi Cotti</p>
+            <a href="mailto:ncotti2020@my.fit.edu">ncotti2020@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Developer</div>
+            <p>John Sellock</p>
+            <a href="mailto:jsellock2020@my.fit.edu">jsellock2020@my.fit.edu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="text">Developer</div>
+            <p>Mason Elizondo</p>
+            <a href="mailto:melizondo2019@my.fit.edu">melizondo2019@my.fit.edu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer>
+    <span>
+      &copy; 2023 Automated Drone Weather Navigation<br/><a href="https://github.com/adnav-weather/adnav-weather.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
+    </span>
+  </footer>
+  <!-- Javascript -->
+  <script>
+    // Toggle menu on mobile or smaller screen
+    /* Open when someone clicks on the span element */
+    function openNav() {
+      document.getElementById("menu-outer").style.height = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("menu-outer").style.height = "0%";
+    }
+
+   // Trigger on scroll after 20px
+   function scrollHandler() {
+         const element = document.getElementById("navbar");
+
+         if (window.scrollY > 20) {
+           element.classList.add("sticky");
+         } else {
+           element.classList.remove("sticky");
+         }
+     }
+     window.addEventListener("scroll", scrollHandler);
+     window.onbeforeunload = function () {window.scrollTo(0, 0);}
+  </script>
+  <!-- JQuery For team carousel -->
+  <script>
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: false,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 1,
+            nav: false
+          }
+        }
+    });
+    $('.carousel-2').owlCarousel({
+        margin: 20,
+        loop: false,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        startPosition: 0,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 1,
+            nav: false
+          }
+        }
+    });
+    $('.carousel-team').owlCarousel({
+        margin:20,
+        loop: false,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 2,
+            nav: false
+          }
+        }
+    });
+ </script>
+</body>
+</html>
