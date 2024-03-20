@@ -1,295 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Automated Drone Population and Weather Navigation</title>
-    <!-- JQuery CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- Carousel Effect JQuery -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- Reloads from start -->
-    <script>history.scrollRestoration = "manual"</script>
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!-- Navbar Section -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <div class="logo rotation"><a href="https://adnav-weather.github.io/"><i class="fa fa-plane"></i></a></div>
-      <!-- List of options -->
-      <div class="menu-outer" id="menu-outer">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <ul class="menu" id="menu-content">
-          <li><a href="https://adnav-weather.github.io/" onclick="closeNav()">Home</a></li>
-          <li><a href="#mission" onclick="closeNav()">Mission</a></li>
-          <li><a href="#milestones" onclick="closeNav()">Milestones</a></li>
-          <li><a href="#contact" onclick="closeNav()">Contact</a></li>
-          <li><a href="research.html" onclick="closeNav()">References</a></li>
-          <li><a href="prevGroup.html" onclick="closeNav()"> Previous Teams Work</a></li>
-        </ul>
-      </div>
-      <div class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></div>
-    </div>
-  </nav>
-  <!-- Home Section -->
-  <section class="home" id="home">
-    <div class="container">
-      <div class="home-content">
-        <div class="main-title">Automated Drone<br/>Population and Weather Navigation </div>
-      </div>
-    </div>
-  </section>
-  <!-- Mission section -->
-  <section class="mission" id="mission">
-    <div class="container">
-      <div class="mission-content">
-        <!-- Mission Image section -->
-        <div class="col left">
-          <img src="./images/aw609.jpg" alt="Picture of an AW609 aircraft"/>
-        </div>
-        <!-- Mission Text section -->
-        <div class="col right">
-          <h2 class="inner-sub-title">Mission</h2>
-          <p class="sub-text">
-            Our mission is to provide an automated computer controlled flight-traversing drone that 
-            can travel and land amongst harsh weather conditions, aerial traffic safely and reliably without
-            an operator.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-   <!-- Milestones Section -->
-  <section class="milestones" id="milestones">
-    <div class="container">
-      <h2 class="sub-title">Milestones</h2>
-      <div class="milestones-content">
-        <div class="carousel owl-carousel col">
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Semester 1</h3>
-              <h3 class="milestone-title">Plan (Sep 6th)</h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1DVMZQwrdiXRQ4Y01fVuppGjevuC4hdhi/view?usp=sharing" target="_blank">Project Plan</a></li>
-                <li><a href="https://docs.google.com/presentation/d/1WtYTWdFJwpP1YA5cdBaIZET9xXC1U8KPM_yq0ItcitY/edit?usp=sharing" target="_blank">Presentation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Milestone #1 (Oct 2nd)</h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1hY-DWc9B95PgqiA6PItd9CrJbnoZ_dgj/view?usp=sharing" target="_blank">Requirement Document</a></li>
-                <li><a href="https://drive.google.com/file/d/1CZ9akDz2EPi8aYum3NpBTtC47hzmjoeN/view?usp=sharing" target="_blank">Design Document</a></li>
-                <li><a href="https://drive.google.com/file/d/16j4XCJs1aRPkWXX3HhCVv9U_RThvh89w/view?usp=sharing" target="_blank">Test Document</a></li>
-                <li><a href="https://drive.google.com/file/d/1O31GVEmgAPbhmnpSsCvwwy0gAgySaRsp/view?usp=drive_link" target="_blank">Progress Report</a></li>
-                <li><a href="https://docs.google.com/presentation/d/1A12lnZSCsdXIBZxvV2qy34q5YkPIBmaE26UkvWEx6z0/edit?usp=sharing" target="_blank">Presentation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Milestone #2 (Oct 30th ) </h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1IFFdWX_-rjX5xI5i-6ElRYX3Sb1vi9YT/view?usp=sharing" target="_blank">Progress Report</a></li>
-                <li><a href="https://docs.google.com/presentation/d/1kLAYnjhVlwQGqICrCDoIvpmGc6lg9fqyb5-bkBNGJGo/edit?usp=sharing" target="_blank">Presentation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Milestone #3 (Nov 27th)</h3>
-              <ul>
-                <li><a href="https://docs.google.com/presentation/d/1WJVlpQLJE126aGZvq07I_pILe_x__yyiVEZrKoC39_E/edit?usp=sharing" target="_blank">Presentation</a></li>
-                <li><a href="https://drive.google.com/file/d/1LaROj6ILiy973745Ek7S8xcICcZ5fwWP/view?usp=sharing" target="_blank">Progress Report</a></li>
-                <li><a href="https://drive.google.com/file/d/1akGNQ7QpUDQaRZvmbdW-EeJ471EeN9xT/view?usp=sharing" target="_blank">Demo</a></li>
-              </ul>
-            </div>
-          </div>
-        <div class="carousel-2 owl-carousel col">
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Semester 2</h3>
-              <h3 class="milestone-title"> Project Plan (Jan. 22nd)</h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1NJrFCMxAMBS_dIVQ40D-LR7xOMIhv96I/view?usp=drive_link" target="_blank">Project Plan</a></li>
-                <li><a href="https://drive.google.com/file/d/17g0fbFFfIf_XSP9hqe_m7vmliXx_IYw0/view?usp=sharing" target="_blank">Presentation</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Milestone #4 (Feb. 19th)</h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1skBWagwRFnDEK1nWla1So0wTg1MX5_OW/view?usp=sharing" target="_blank">Progress Report</a></li>
-                <li><a href="https://docs.google.com/presentation/d/1-RDzk7638HHTYM5I_6hxSx23s5yh4niK4KyhIEBHV_I/edit?usp=sharing" target="_blank">Presentation</a></li>
-                <li><a href="https://drive.google.com/file/d/1o5pt-qFkBf5IWPpjksv8neoIpxkDbPcf/view?usp=sharing" target="_blank">Maplibre Demo</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Milestone #5 (Mar. 18th)</h3>
-              <ul>
-                <li><a href="https://drive.google.com/file/d/1-yI6ZkOcaVXNgZpkSWL5ipJoGLtEVLto/view?usp=sharing" target="_blank">Progress Report</a></li>
-                <li><a href="https://docs.google.com/presentation/d/1QTERTlzsOPXT-1kQxjq0Z5F9ikWF_aj9sA0gFa2jR0c/edit?usp=sharing" target="_blank">Presentation</a></li>
-                <li><a href="https://drive.google.com/file/d/1MAwx20t9TtNdbEkCS_RblXGh0JZIZmtJ/view?usp=sharing" target="_blank">Demo</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <h3 class="milestone-title">Milestone #6 (Apr. 15th)</h3>
-              <ul>
-                <li><a href="" target="_blank">Progress Report</a></li>
-                <li><a href="" target="_blank">Presentation</a></li>
-                <li><a href="" target="_blank">Demo</a></li>
-                <li><a href="" target="_blank">User Manual</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="sub-title">Contact The Team</h2>
-      <div class="carousel-team owl-carousel">
-        <div class="card">
-          <div class="box">
-            <div class="text">Faculty Advisor</div>
-            <p>Dr. Siddhartha Bhattacharyya</p>
-            <a href="mailto:sbhattacharyya@fit.edu">sbhattacharyya@fit.edu</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <div class="text">Graduate Student Advisor</div>
-            <p>Parth Ganeriwala</p>
-            <a href="mailto:pganeriwala2022@my.fit.edu">pganeriwala2022@my.fit.edu</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <div class="text">Developer</div>
-            <p>Justin Swanson</p>
-            <a href="mailto:jswanson2020@my.fit.edu">jswanson2020@my.fit.edu</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <div class="text">Developer</div>
-            <p>CJ Norton</p>
-            <a href="cnorton2021@my.fit.edu">cnorton2021@my.fit.edu</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Footer Section -->
-  <footer>
-    <span>
-      &copy; 2023 Automated Drone Weather Navigation<br/><a href="https://github.com/adnav-weather/adnav-weather.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
-    </span>
-  </footer>
-  <!-- Javascript -->
-  <script>
-    // Toggle menu on mobile or smaller screen
-    /* Open when someone clicks on the span element */
-    function openNav() {
-      document.getElementById("menu-outer").style.height = "100%";
-    }
+<html>
+    <head>
+        <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
+        <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div id='map' style='width: 100%; height: 100%;'></div>
+        <script>
+            let map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://api.maptiler.com/maps/openstreetmap/style.json?key=B4aXfeirwaNRuIpLUBUC', // stylesheet location
+            center: [-96.8378912, 32.805745], // starting position [lng, lat]
+            zoom: 13 // starting zoom
+            });
 
-    /* Close when someone clicks on the "x" symbol inside the overlay */
-    function closeNav() {
-      document.getElementById("menu-outer").style.height = "0%";
-    }
+            // const data_path = 'http://localhost:5500/pop_tiles_13_14/{z}/{x}/{y}.pbf'
+            // const demo1MartinUrl = `http://localhost:3000/pop_tiles`
+            /*
+                Need to start Martin Tileserver in the directory first, with the following command:
+                martin ./filename
+                It will bind to port 3000, so the URL is shown below. Also this example is for a .mbtiles file.
+                Martin is meant to be configured to serve tiles from a postgis database, maybe we will look
+                into that to generate tiles on the fly from our data.
+            */
+            const demo2MartinUrl = `http://localhost:3000/full_pop_tiles`
+            map.on('load', () => {
+                // add the population mbtiles
+                map.addSource('population', {
+                    type: 'vector',
+                    url: demo2MartinUrl,
+                    minzoom: 0,
+                    maxzoom: 14
+                });
+                /*
+                layers for demo 1 .mbtiles file. 7 layers for 7 joined input .mbtiles
+                const layers = ['population_4326_z13',
+                    'population_4326_z11',
+                    'population_4326_z9',
+                    'population_4326_z7',
+                    'population_4326_z4',
+                    'population_4326_z2',
+                    'population_4326_z0']
 
-   // Trigger on scroll after 20px
-   function scrollHandler() {
-         const element = document.getElementById("navbar");
+                 */
+                const demo2Layers = ['population_4326']
+                demo2Layers.forEach((sourceLayer, index) => {
+                    map.addLayer({
+                        'id': 'population_data' + index.toString(),
+                        'type': 'fill',
+                        'source': 'population', // same as addSource argument.
+                        'source-layer': sourceLayer,
+                        'paint': {
+                            /* values for pop distribution are as follows:
+                                0 >= x1 > 7,
+                                 7 >= x2 > 39,
+                                 39 >= x3 > 240,
+                                 240 >= x4 > 1490,
+                                 1490 >= x5 > 9257.
+                            */
 
-         if (window.scrollY > 20) {
-           element.classList.add("sticky");
-         } else {
-           element.classList.remove("sticky");
-         }
-     }
-     window.addEventListener("scroll", scrollHandler);
-     window.onbeforeunload = function () {window.scrollTo(0, 0);}
-  </script>
-  <!-- JQuery For team carousel -->
-  <script>
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: false,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-          0:{
-            items: 1,
-            nav: false
-          },
-          600:{
-            items: 1,
-            nav: false
-          },
-          1000:{
-            items: 1,
-            nav: false
-          }
-        }
-    });
-    $('.carousel-2').owlCarousel({
-        margin: 20,
-        loop: false,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        startPosition: 0,
-        responsive: {
-          0:{
-            items: 1,
-            nav: false
-          },
-          600:{
-            items: 1,
-            nav: false
-          },
-          1000:{
-            items: 1,
-            nav: false
-          }
-        }
-    });
-    $('.carousel-team').owlCarousel({
-        margin:20,
-        loop: false,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-          0:{
-            items: 1,
-            nav: false
-          },
-          600:{
-            items: 1,
-            nav: false
-          },
-          1000:{
-            items: 2,
-            nav: false
-          }
-        }
-    });
- </script>
-</body>
+                            'fill-color': [
+                                'interpolate',
+                                ['linear'],
+                                ['get', 'population'],
+                                0, '#000004',
+                                7, '#51127c',
+                                39, '#b73779',
+                                240, '#fc8961',
+                                1490, '#fcfdbf'
+                            ],
+                            //'fill-color': "#E580A2",
+                            'fill-opacity': 0.5,
+                            'fill-outline-color': "#000000"
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>
+
+
