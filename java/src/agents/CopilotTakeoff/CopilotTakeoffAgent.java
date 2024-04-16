@@ -109,7 +109,7 @@ public class CopilotTakeoffAgent extends XPlaneAgent
         // read the soar file
         try
         {
-            String pathToSoar =  "C:\\Users\\assist-lab\\Desktop\\SOARAgent\\load.soar";
+            String pathToSoar =  "C:\\Users\\assist-lab\\Documents\\adnav-pop-weather\\SOARAgent\\load.soar";
             SoarCommands.source(soar_agent.getInterpreter(), pathToSoar);
             System.out.println("There are now " + soar_agent.getProductions().getProductionCount() + " productions loaded");
 

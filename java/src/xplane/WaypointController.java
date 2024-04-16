@@ -227,7 +227,7 @@ public class WaypointController {
     }
 
     public ArrayList<Node> getPolygonsFromTxtFile() throws IOException {
-        final File folder = new File("C:\\Users\\assist-lab\\Downloads\\JavaAgent_SeniorDesign-v.1.0\\JavaAgent_SeniorDesign-v.1.0\\java\\inputCoordinates");
+        final File folder = new File("C:\\Users\\assist-lab\\Documents\\adnav-pop-weather\\java\\inputCoordinates");
         File[] files = listFilesForFolder(folder);
         ArrayList<Node> polygon_array = new ArrayList<>();
 
