@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flight-plan xmlns="http://www8.garmin.com/xmlschemas/FlightPlan/v1">
+  <created>2023-02-24T22:18:10Z</created>
+  <waypoint-table>
+    <waypoint>
+      <identifier>SV001</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>35.112725</lat>
+      <lon>-96.412748</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV002</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>35.084898</lat>
+      <lon>-96.438106</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV003</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>35.070850</lat>
+      <lon>-96.421274</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV004</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>35.068067</lat>
+      <lon>-96.372090</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV005</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>35.108304</lat>
+      <lon>-96.378924</lon>
+      <comment />
+    </waypoint>
+  </waypoint-table>
+  <route>
+    <route-name>SV001 SV005</route-name>
+    <flight-plan-index>1</flight-plan-index>
+    <route-point>
+      <waypoint-identifier>SV001</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV002</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV003</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV004</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV005</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+  </route>
+</flight-plan>
