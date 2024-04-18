@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flight-plan xmlns="http://www8.garmin.com/xmlschemas/FlightPlan/v1">
+  <created>2023-02-24T21:06:02Z</created>
+  <waypoint-table>
+    <waypoint>
+      <identifier>SV001</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.638660</lat>
+      <lon>-97.237946</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV002</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.619910</lat>
+      <lon>-97.234129</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV003</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.620009</lat>
+      <lon>-97.174344</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV004</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.607339</lat>
+      <lon>-97.168162</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV005</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.596393</lat>
+      <lon>-97.145985</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV006</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.598824</lat>
+      <lon>-97.125413</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV007</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.611340</lat>
+      <lon>-97.118358</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV008</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.647485</lat>
+      <lon>-97.107701</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV009</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.652255</lat>
+      <lon>-97.123599</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV010</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.680808</lat>
+      <lon>-97.149149</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV011</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.677970</lat>
+      <lon>-97.167920</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV012</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.652660</lat>
+      <lon>-97.158290</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV013</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.653194</lat>
+      <lon>-97.171521</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV014</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.672054</lat>
+      <lon>-97.184913</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV015</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.669994</lat>
+      <lon>-97.205496</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV016</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.663213</lat>
+      <lon>-97.213822</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV017</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.649491</lat>
+      <lon>-97.215865</lon>
+      <comment />
+    </waypoint>
+    <waypoint>
+      <identifier>SV018</identifier>
+      <type>USER WAYPOINT</type>
+      <country-code />
+      <lat>33.647425</lat>
+      <lon>-97.236441</lon>
+      <comment />
+    </waypoint>
+  </waypoint-table>
+  <route>
+    <route-name>SV001 SV018</route-name>
+    <flight-plan-index>1</flight-plan-index>
+    <route-point>
+      <waypoint-identifier>SV001</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV002</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV003</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV004</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV005</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV006</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV007</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV008</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV009</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV010</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV011</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV012</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV013</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV014</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV015</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV016</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV017</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+    <route-point>
+      <waypoint-identifier>SV018</waypoint-identifier>
+      <waypoint-type>USER WAYPOINT</waypoint-type>
+      <waypoint-country-code />
+    </route-point>
+  </route>
+</flight-plan>
