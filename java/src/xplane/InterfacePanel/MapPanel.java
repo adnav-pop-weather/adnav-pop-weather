@@ -5,6 +5,7 @@ import xplane.InterfacePanel.mapBoxAPI.mapbox;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 
@@ -29,7 +30,15 @@ public class MapPanel extends JPanel implements Runnable {
             try {
                 java.net.URL url = new URL(mapEndpoint);
                 image = ImageIO.read(url);
-                map = new ImageIcon(image);
+
+                int labelWidth = 600;
+                int labelHeight = 500;
+                double scaleFactor = 1.5;
+                int scaledWidth = (int) Math.round(labelWidth * scaleFactor);
+                int scaledHeight = (int) Math.round(labelHeight * scaleFactor);
+                Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+
+                map = new ImageIcon(scaledImage);
                 mapLabel = new JLabel(map);
                 mapLabel.setBounds(0, 500, 500, 1000);
 
@@ -51,7 +60,13 @@ public class MapPanel extends JPanel implements Runnable {
             try {
                 java.net.URL url = new URL(mapEndpoint);
                 image = ImageIO.read(url);
-                map.setImage(image);
+                int labelWidth = 600;
+                int labelHeight = 500;
+                double scaleFactor = 1.5;
+                int scaledWidth = (int) Math.round(labelWidth * scaleFactor);
+                int scaledHeight = (int) Math.round(labelHeight * scaleFactor);
+                Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
+                map.setImage(scaledImage);
                 mapLabel.setIcon(map);
 
                 add(mapLabel);

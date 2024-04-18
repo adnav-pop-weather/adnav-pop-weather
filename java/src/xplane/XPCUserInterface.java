@@ -49,7 +49,7 @@ public class XPCUserInterface extends JFrame {
         setTitle("Sensor Output:");
         setResizable(false);
         setLocation(400, 0);
-        setSize(1000, 1010);
+        setSize(1000, 1410);
         setLayout(new GridLayout(2, 1));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

@@ -20,7 +20,7 @@ public class mapbox {
         //static should be good
         String mapType = "static/";
         //overlay
-        String planeMarker = "pin-s-airport+000("+ currentLon + "," + currentLat + ")";
+        String planeMarker = "pin-s-airport+FFFFFF("+ currentLon + "," + currentLat + ")";
 
         String originalPath = "";
         String detouredPath = "";
