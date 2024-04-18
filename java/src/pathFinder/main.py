@@ -1,4 +1,4 @@
-from os import getcwd
+import os
 import sys
 
 from Risk_Map_Maker import Risk_Map_Maker as risk_map_maker
@@ -58,7 +58,11 @@ def generate_risk_vector_format(population_filepath, start_loc, dest_loc):
 if __name__ == '__main__':
     # Packages for conda environment: conda install pyogrio pyarrow geopandas geocube.
     # example arguments: "32.893895180625904" "-97.0509447245488" "33.86057477654421" "-98.49042166496733"
+    # print(f'current working directory: {os.getcwd()}')
+    # print(f'current file with command os.path.dirname(__file__): {os.path.dirname(__file__)}')
     start_loc = [float(sys.argv[1]), float(sys.argv[2])]
     dest_loc = [float(sys.argv[3]), float(sys.argv[4])]
-    filepath = getcwd() + '\\data\\Kontur_Population_US_20231029.gpkg'  # filepath to the data source
+    filepath = r'C:\Users\Swans\OneDrive\Desktop\Final_Senior_Project\java\src\pathFinder\data' \
+               r'\Kontur_Population_US_20231029.gpkg '
+    # filepath = getcwd() + '\\data\\Kontur_Population_US_20231029.gpkg'  # filepath to the data source
     generate_risk_vector_format(population_filepath=filepath, start_loc=start_loc, dest_loc=dest_loc)  # generate risk map in vector format

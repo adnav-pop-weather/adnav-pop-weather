@@ -154,7 +154,9 @@ class Risk_Map_Maker:
         tessellation = tessellation.to_crs(epsg=4326)
         tessellation = tessellation.drop(columns=['index', 'index_column'])  # Keeping these columns wastes space.
         # will overwrite existing file.
-        tessellation.to_file('data\\offline_risk.gpkg', layer='offline_risk', driver='GPKG', engine='pyogrio')
+        output_file_path = os.path.join(os.path.dirname(__file__), 'data\\offline_risk.gpkg')
+        # print(f'output_file_path: {output_file_path}')
+        tessellation.to_file(output_file_path, layer='offline_risk', driver='GPKG', engine='pyogrio')
         return tessellation
 
     def get_risk_map(self, population_gdf):
