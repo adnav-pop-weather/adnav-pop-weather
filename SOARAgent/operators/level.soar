@@ -1,0 +1,14 @@
+echo "\nLoading level.soar"
+
+sp {apply*level
+    (state <s> ^operator.name level
+            #    ^name flying
+               ^io.output-link <out>)
+    (<out> ^throttle <tho>)
+-->
+    # (<s> ^name flying -)
+    # (<s> ^name leveling +)
+    (<out> ^target-des-rate 0)
+    (<out> ^throttle <tho> - 0.283 +)
+    (write (crlf) |Holding|)
+}

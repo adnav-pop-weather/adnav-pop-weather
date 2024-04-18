@@ -1,0 +1,18 @@
+echo "\nLoading landing-phase-two.soar"
+
+sp {apply*landing-phase-two
+    (state <s> ^operator.name landing-phase-two
+               ^io <io>
+               ^landing phase-one)
+    (<io> ^input-link.flightdata <fd>
+          ^output-link <out>)
+    (<out> ^throttle <tho>
+           ^autoflaps <afo>)
+-->
+    (<out> ^throttle <tho> - 0.0 +)
+    (<out> ^autoflaps <afo> - on +)
+    (<s> ^landing phase-one - phase-two +)
+    (write (crlf) |Initiating Landing Phase 2|)
+}
+
+

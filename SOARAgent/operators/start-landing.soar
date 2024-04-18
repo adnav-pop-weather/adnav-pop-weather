@@ -1,0 +1,21 @@
+##!
+# @file
+#
+# @created rjones 20210121
+
+echo "\nLoading start-landing.soar"
+
+sp {apply*start-landing
+    (state <s> ^operator.name start-landing
+               ^landing no
+               ^io.output-link <out>)
+    (<out> ^target-altitude <ta>
+           ^throttle <tho>)
+
+-->
+    (<out> ^throttle <tho> - 0.0 +)
+    (<out> ^target-altitude <ta> - 25000 +)
+    (<s> ^landing no - phase-one +)
+    (write (crlf) |Initiating Landing Phase 1|)
+}
+

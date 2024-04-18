@@ -1,0 +1,131 @@
+##!
+# @file
+#
+# @created rjones 20210118
+
+echo "\nLoading top-level.soar"
+# sp{ (state }
+
+
+
+# Initialize agent
+sp {propose*initialize
+    (state <s> ^superstate nil
+               ^io.input-link.flightdata <fd>
+              -^name)
+    (<fd> ^throttle)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name initialize)
+    (write (crlf) |Agent initializing...|)
+
+ }
+
+# takeoff agent
+sp {propose*takeoff
+    (state <s> ^name takeoff
+               ^flight-mode vertical
+               ^io.input-link.flightdata <fd>)
+    (<fd> ^throttle <th> < 0.9)
+
+-->
+    (write (crlf) |Throttle | <th>)
+    (<s> ^operator <o> + >,=)
+    (<o> ^name takeoff)
+
+}
+
+# transition to horizontal
+sp {propose*transition
+    (state <s> ^name takeoff
+               ^flight-mode vertical
+               ^io.input-link.flightdata <fd>)
+    (<fd>  ^elevation > 5000)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name transition)
+    (write (crlf) |Proposing Transitioning to Horizontal mode...|)
+}
+
+sp {propose*level
+    (state <s> ^name flying
+               ^flight-mode horizontal
+               ^landing no
+               ^io.input-link.flightdata <fd>)
+            (<fd> ^elevation > 25000)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name level)
+    (write (crlf) |Proposing level flying...|)
+}
+
+# landing sequence
+sp {propose*start-landing
+    (state <s> ^flight-mode horizontal)
+    (<s> ^io.input-link.flightdata.initiate-landing yes)
+    (<s> ^landing no)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name start-landing)
+}
+
+sp {propose*landing-phase-two
+    (state <s> ^flight-mode horizontal
+               ^landing phase-one
+               ^io.input-link.flightdata.elevation <= 4200)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name landing-phase-two)
+    (write (crlf) |Proposing Landing Phase 2|)
+}
+
+sp {propose*landing-phase-three
+    (state <s> ^flight-mode horizontal
+               ^landing phase-two
+               ^io.input-link.flightdata <fd>)
+    (<fd> ^elevation <= 3000)
+        #   ^distance-to-target < 1.0)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name landing-phase-three)
+}
+
+sp {propose*landing-phase-four
+    (state <s> ^landing phase-three
+               ^io.input-link.flightdata <fd>)
+    (<fd> ^elevation <= 1000)
+    
+        #   ^distance-to-target < 1.0)
+-->
+    (<s> ^operator <o> + =)
+    (<o> ^name landing-phase-four)
+}
+
+sp {propose*landing-phase-five
+    (state <s> ^landing phase-four
+               ^io.input-link.flightdata <fd>)
+    (<fd> ^elevation <= 500 )
+    
+        #   ^distance-to-target < 1.0)
+-->
+    (<s> ^operator <o> + =)
+    (<o> ^name landing-phase-five)
+}
+
+sp {propose*landing-phase-six
+    (state <s> ^landing phase-five
+               ^io.input-link.flightdata <fd>)
+    (<fd> ^elevation <= 100)
+    
+        #   ^distance-to-target < 1.0)
+-->
+    (<s> ^operator <o> + =)
+    (<o> ^name landing-phase-six)
+}
+sp {propose*landing-finished
+    (state <s> ^landing phase-six
+               ^io.input-link.flightdata.airspeed <= 10)
+-->
+    (<s> ^operator <o> + >,=)
+    (<o> ^name landing-finished)
+}

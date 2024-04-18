@@ -1,0 +1,16 @@
+echo "\nLoading landing-finished.soar"
+
+sp {apply*landing-finished
+    (state <s> ^operator.name landing-finished
+               ^io.input-link.flightdata <fd>
+               ^io.output-link <out>
+               ^landing phase-six)
+    (<fd> ^elevation <= 10)
+    (<out> ^throttle <tho>)
+-->
+    (<out> ^throttle <tho> - 0.23 +)
+    # (<out> ^rotor-pos 0.99)
+    (<s> ^landing phase-six - landed +)
+    (write (crlf) |Finished Landing|)
+}
+
