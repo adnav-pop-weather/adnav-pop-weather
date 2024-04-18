@@ -56,7 +56,8 @@ def generate_risk_vector_format(population_filepath, start_loc, dest_loc):
 
 
 if __name__ == '__main__':
-    # example arguments: "32.893895180625904", "-97.0509447245488", "33.86057477654421", "-98.49042166496733"
+    # Packages for conda environment: conda install pyogrio pyarrow geopandas geocube.
+    # example arguments: "32.893895180625904" "-97.0509447245488" "33.86057477654421" "-98.49042166496733"
     start_loc = [float(sys.argv[1]), float(sys.argv[2])]
     dest_loc = [float(sys.argv[3]), float(sys.argv[4])]
     filepath = getcwd() + '\\data\\Kontur_Population_US_20231029.gpkg'  # filepath to the data source
