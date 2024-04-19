@@ -3,6 +3,7 @@ package xplane;
 import coordinateParser.TextParser;
 import graph1.Edge;
 import graph1.Node;
+import pathFinder.newPathfinder;
 import polygonHelper.insidePolygon;
 import pathFinder.pathGenerator;
 
@@ -62,13 +63,25 @@ public class WaypointController {
         System.err.println(currentWaypointIndex);
         // If plane is within threshold (1/2 km) from waypoint, then update waypoint to next point
         if (getDistanceToWaypoint(lat,lon) <= THRESHOLD) {
-            if (currentWaypointIndex == waypoints.get(currentPolygonIndex).size()-1) {
-                currentWaypointIndex = 0;
-                currentPolygonIndex += 1;
-            }
-            else{
                 currentWaypointIndex += 1;
-            }
+        }
+    }
+
+    // call this function in the new code.
+    public void updateWaypointListRisk(String CityDestination, double[] startCoordinates) throws Exception {
+        if (first_loc) {
+            // TODO call the run script with hard coded start airport.
+            double destination_lat = cityCoordinates.get(CityDestination)[0];
+            double destination_lon = cityCoordinates.get(CityDestination)[1];
+
+            lastRecordedSpot = startCoordinates;
+
+            newPathfinder riskPathGenerator = newPathfinder.getPathfinderInstance();
+            // build the graph with the hard coded start, and destination
+            // riskPathGenerator.runScript(32.981510,-97.081169, destination_lat, destination_lon);
+            riskPathGenerator.buildGraph();
+            waypoints = riskPathGenerator.getPath(startCoordinates, cityCoordinates.get(CityDestination));
+            first_loc = false;
         }
     }
 
@@ -139,8 +152,8 @@ public class WaypointController {
 
     public double getDistanceToWaypoint(double lat, double lon){
 
-        double lat2 = waypoints.get(currentPolygonIndex).get(currentWaypointIndex).getCoordinates()[0];
-        double lon2 = waypoints.get(currentPolygonIndex).get(currentWaypointIndex).getCoordinates()[1];
+        double lat2 = waypoints.get(currentWaypointIndex).get(0).getCoordinates()[0];
+        double lon2 = waypoints.get(currentWaypointIndex).get(0).getCoordinates()[1];
 
         lat = Math.toRadians(lat);
         lat2 = Math.toRadians(lat2);

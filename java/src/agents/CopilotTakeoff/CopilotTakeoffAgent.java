@@ -119,11 +119,11 @@ public class CopilotTakeoffAgent extends XPlaneAgent
         }
     }
 
-    private WaypointController getWaypoints() {
+    private WaypointController getWaypoints() throws Exception {
         waypointControl = WaypointController.getSingle_instance();
         //waypoints = get_instance
         if (UIobj.displayLOCButton == false && UIobj.startedLOC == true){
-            waypointControl.updateWaypointList(UIobj.cities[UIobj.selectedCityIndex], UIobj.startCoordinates);
+            waypointControl.updateWaypointListRisk(UIobj.cities[UIobj.selectedCityIndex], UIobj.startCoordinates);
             UIobj.startedLOC = false;
         }
         waypointControl.updateNextWaypoints(UIobj.getIMULat(),UIobj.getIMULon());
@@ -324,12 +324,12 @@ public class CopilotTakeoffAgent extends XPlaneAgent
                 // read in polygon text file (once and only once)
                 waypointControl.setInitialPolygonFileLoaded();
                 // determine new target waypoint
-                targetHeading = waypointControl.calculateHeading(waypointControl.waypoints.get(currentPolygonIndex).get(currentWaypointIndex).getCoordinates()[0], waypointControl.waypoints.get(currentPolygonIndex).get(currentWaypointIndex).getCoordinates()[1], latitude, longitude);
+                targetHeading = waypointControl.calculateHeading(waypointControl.waypoints.get(currentWaypointIndex).get(0).getCoordinates()[0], waypointControl.waypoints.get(currentWaypointIndex).get(0).getCoordinates()[1], latitude, longitude);
 
 
-                UIobj.setTargetWaypoint((float)waypointControl.waypoints.get(currentPolygonIndex).get(currentWaypointIndex).getCoordinates()[0],(float)waypointControl.waypoints.get(currentPolygonIndex).get(currentWaypointIndex).getCoordinates()[1]);
+                UIobj.setTargetWaypoint((float)waypointControl.waypoints.get(currentWaypointIndex).get(0).getCoordinates()[0],(float)waypointControl.waypoints.get(currentWaypointIndex).get(0).getCoordinates()[1]);
                 UIobj.setDistanceToTarget(waypointControl.getDistanceToWaypoint(latitude,longitude));
-                UIobj.displayLandingButton = waypointControl.waypoints.get(currentPolygonIndex).get(currentWaypointIndex).isLandingPoint;
+                UIobj.displayLandingButton = waypointControl.waypoints.get(currentWaypointIndex).get(0).isLandingPoint;
                 System.out.println("TARGET HEADING: " + targetHeading);
                 xpcobj.setTargetHeading(targetHeading);
 

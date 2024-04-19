@@ -1,5 +1,6 @@
 package xplane.InterfacePanel;
 
+import pathFinder.newPathfinder;
 import util.CustomRadioButtonIcon;
 
 import javax.swing.*;
@@ -12,6 +13,8 @@ import java.util.Hashtable;
 import java.util.Set;
 
 public class CommandPanel extends JPanel implements Runnable, ActionListener {
+
+    private newPathfinder pathfinder = newPathfinder.getPathfinderInstance();
     private boolean strLandProd = false, strTakeOffProd = false;
     private static boolean dpLOC= true, strLOC = false, showLocRoute = false;
     private final JRadioButton radio1, radio2, radio3;

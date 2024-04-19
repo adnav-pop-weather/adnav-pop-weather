@@ -32,15 +32,30 @@ public class mapbox {
 
         ArrayList<ArrayList<Node>> waypointss = new ArrayList<>();
 
-        //Add destination waypoint to end of path
-        Node temp1 = new Node(lastRecordedSpot);
-        ArrayList<Node> tempList = new ArrayList<>();
-        tempList.add(temp1);
-        waypointss.add(tempList);
+        if (waypoints.size() > 2) {
+            //Add destination waypoint to end of path
+            Node temp1 = new Node(lastRecordedSpot);
+            ArrayList<Node> tempList = new ArrayList<>();
+            tempList.add(temp1);
+            waypointss.add(tempList);
 
-        for (int i = 0; i < waypoints.size(); i++) {
-            waypointss.add(waypoints.get(i));
+            for (int i = 0; i < waypoints.size() - 2; i++) {
+                ArrayList<Node> temp = new ArrayList<>();
+                for (Node node : waypoints.get(i)) {
+                    temp.add(node);
+                }
+                waypointss.add(temp);
+
+            }
+            ArrayList<Node> tempList2 = new ArrayList<>();
+            tempList2.add(waypoints.get(waypoints.size() - 1).get(0));
+            waypointss.add(tempList2);
+        } else {
+            waypointss.addAll(waypoints);
         }
+
+
+        System.out.println(waypointss);
 
         if (loc) {
             cautionMarker = ",pin-s-caution+FF0000("+ lastRecordedSpot[1] + "," + lastRecordedSpot[0] + ")";
@@ -65,26 +80,37 @@ public class mapbox {
         if (waypoints.isEmpty()) {
             return "";
         }
+//        if (waypoints.size() != 1) {
+//            ArrayList<Node> temp = new ArrayList<>();
+//            for (ArrayList<Node> item : waypoints) {
+//                temp.add(item.get(0));
+//            }
+//            waypoints.clear();
+//            waypoints.add(temp);
+//        }
+
 
         StringBuilder encodedPoints = new StringBuilder();
         long prevLat = 0;
         long prevLon = 0;
 
         for (ArrayList<Node> waypoint : waypoints) {
-            for (Node node : waypoint) {
-                long lat = Math.round(node.getCoordinates()[0] * 1e5);
-                long lon = Math.round(node.getCoordinates()[1] * 1e5);
+            Node node = waypoint.get(0);
+            System.out.print(node.getCoordinates()[0]);
+            System.out.println(node.getCoordinates()[1]);
+            long lat = Math.round(node.getCoordinates()[0] * 1e5);
+            long lon = Math.round(node.getCoordinates()[1] * 1e5);
 
-                long latDiff = lat - prevLat;
-                long lonDiff = lon - prevLon;
+            long latDiff = lat - prevLat;
+            long lonDiff = lon - prevLon;
 
-                encodeValue(latDiff, encodedPoints);
-                encodeValue(lonDiff, encodedPoints);
+            encodeValue(latDiff, encodedPoints);
+            encodeValue(lonDiff, encodedPoints);
 
-                prevLat = lat;
-                prevLon = lon;
-            }
+            prevLat = lat;
+            prevLon = lon;
         }
+
         return encodedPoints.toString();
     }
 
